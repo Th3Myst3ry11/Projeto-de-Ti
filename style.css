@@ -43,7 +43,7 @@ a{
     cursor: pointer;
     width: 100%;
      height:100%;}
-.pessoa,
+/*.pessoa,
 .procura,
 .carrinho{
     width: 30px;
@@ -51,6 +51,12 @@ a{
     display: inline-block;
     margin: 10px;
     
+}*/
+.icons a img {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    margin: 10px;   
 }
 .pessoa a img,
 .procura a img,
@@ -77,7 +83,7 @@ a{
     content:'';
     height:3px;
     width:0;
-    background:violet;
+    background:#bd00b3;
     position:absolute;
     left:20px;
     bottom: -10px;
@@ -95,17 +101,59 @@ a{
 .sobre :hover::after{
 width: 65%;
 }
-.logo_div{
-    margin-top: 10px;
-    margin-left: 10px;
+.logo_div{  
     width: 150px;
     height: 80px;
 }
+.checkbtn{
+font-size: 30px;
+position: absolute;
+ left: 10px;
+display: none;
+ cursor: pointer;
+  }
+  #check{
+    display: none;
+  }
+  @media (max-width: 870px){
+ .icons{
+     padding-right: 0;
+  }
+}
+@media (max-width: 801px){
+    .checkbtn{
+     display: block;
+    }
+    .logo_div{
+        margin-left:50px ;
+    }
+    ul{
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: #bd00b3;
+      top: 95px;
+      left: -100%;
+      text-align: left;
+      transition: all .5s;
+    }
+    .text_links  li{
+      display: block;
+      margin: 50px 0;
+      line-height: 30px;
+    }
+    .text_links  li a{
+      font-size: 20px;
+    }
+    #check:checked ~ ul{
+      left: 0;
+    }
+  }
 .hwrap{
     width: 100%;
     height: 60px;
     overflow: hidden;
-    background: violet; 
+    background: #bd00b3; 
 }
 .sliding_text{
 display: flex;
@@ -130,4 +178,5 @@ position: relative;
 97%{right: 200%;}
 100%{right: 200%;}
 }
+
 .sliding_text{animation:slide linear 20s infinite;}
