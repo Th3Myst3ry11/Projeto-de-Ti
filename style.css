@@ -26,10 +26,12 @@
 *{
     box-sizing: border-box;
     margin: 0;
-    padding: 0;  
-}
-header{
+    padding: 0;
     font-family: 'Source Serif 4', sans-serif;
+}
+
+header{
+    
     font-weight: 500;
     display: flex;
     justify-content: space-between;
@@ -89,9 +91,9 @@ a{
     bottom: -10px;
     transition:0.5s;
 }
-.explore :hover::after{
-    width: 60%;
-}
+/*::after sintax de content -- o conteudo vem after do content*/
+
+
 .mais :hover::after{
     width: 72%;
 }
@@ -104,6 +106,7 @@ width: 65%;
 .logo_div{  
     width: 150px;
     height: 80px;
+    /*aqui em baixo é a responsividade*/
 }
 .checkbtn{
 font-size: 30px;
@@ -127,6 +130,9 @@ display: none;
     .logo_div{
         margin-left:50px ;
     }
+    .icons{
+        display:flex ;
+    }
     ul{
       position: fixed;
       width: 100%;
@@ -148,6 +154,7 @@ display: none;
     #check:checked ~ ul{
       left: 0;
     }
+/*aqui em baixo é o sliding text*/
   }
 .hwrap{
     width: 100%;
@@ -179,4 +186,126 @@ position: relative;
 100%{right: 200%;}
 }
 
-.sliding_text{animation:slide linear 20s infinite;}
+.sliding_text{animation:slide linear 20s infinite;
+}
+
+    /* aqui em baixo é o codigo do menu dropdown que já está a funcionar era so alterar a distancia de menu_sub:hover 
+    para menu-sub :hover.... de qq forma ainda tenho q utilizar alguma forma de javascript(jquery) para fazer a div sliding text
+    desaparecer quando faço hover no .explore-- por conseguinte será feito no final*/
+  
+.menu-sub {
+    margin-top: 10px;
+    left: 0;  
+    position: absolute;
+   /* width: 200vh;
+    left: -700px;*/
+    width: 900px;
+    background: rgb(255, 253, 253);
+opacity: 100%;
+    padding: 2em; 
+   display: none; 
+  }
+  
+  .explore:hover .menu-sub{
+   display: block;
+  
+  }
+ 
+  .menu-sub li {
+    display: block;
+  }
+  
+  .menu-sub a {
+    padding: 0;
+    margin-bottom: .35em;
+  }
+  
+  .menu-sub a:hover {
+    text-decoration: underline;
+    
+  }
+  
+  .menu-category {
+    margin: 2.5em 0 .5em;
+    color: rgb(0, 0, 0); 
+  }
+  
+  .menu-category:first-of-type {
+    margin-top: 0;
+  }
+  
+  .menu-col-1
+   {
+    float: left;
+    
+  }
+  
+  .menu-col-1 {
+    width: 25%;
+  }
+  
+  /*termina aqui o dropdown*/
+  /* menu sub width: 200vh;
+    left: -700px;*/
+    .gajo-com-basketball{
+      margin-left: 50px;
+      width: 94%;
+      height: 83vh;
+      margin-bottom: 50px;
+    }
+    .gajo-com-basketball img{
+     width: 100%;
+    }
+    .section-img1{
+      display: flex;
+justify-content: flex-start;
+
+ 
+    }
+    /*  <!--parte 1 of images-->*/
+    .hood-black-white{
+    background-color: #f5f5f5;
+      position: absolute;
+      margin: 50px;
+    }
+    .img-area{
+      position: relative;
+      height: 400px;
+      width: 400px;
+    }
+    .img-area img{
+      position: absolute;
+      left: 0;
+      height: 400px;
+      width: 400px;
+      opacity: 1;
+      transition: opacity 1s ease-in-out;
+    }
+    .img-area .white-hood:hover{
+     opacity: 0;
+      cursor: pointer;
+    }
+     /*  <!--parte 2 of images-->*/
+     .hood-donuts-container{
+       width: 400px;
+      background-color: #f5f5f5;
+      position: relative;
+        margin: 50px;
+        left: 500px;
+      }
+      .img-area2{
+        height: 400px;
+        width: 400px;
+      }
+      .img-area2 img{
+      position: absolute;
+       
+        height: 400px;
+        width: 400px;
+        opacity: 1;
+        transition: opacity 1s ease-in-out;
+      }
+      .img-area2 .donuts-hoodie2:hover{
+       opacity: 0;
+        cursor: pointer;
+      }
