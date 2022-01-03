@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap');
+
 /*codigo para a barra de navegação
     .navbar ul li{
     list-style:none;
@@ -31,7 +34,7 @@
 }
 
 header{
-    
+   
     font-weight: 500;
     display: flex;
     justify-content: space-between;
@@ -161,7 +164,7 @@ display: none;
     width: 100%;
     height: 60px;
     overflow: hidden;
-    background: #bd00b3; 
+    background: #f5f5f5; 
 }
 .sliding_text{
 display: flex;
@@ -248,6 +251,10 @@ opacity: 100%;
   /*termina aqui o dropdown*/
   /* menu sub width: 200vh;
     left: -700px;*/
+    .gajo-com-basketball video{
+      width: 100%;
+     height: auto;
+    }
     .gajo-com-basketball{
       margin-left: 50px;
       width: 94%;
@@ -258,11 +265,14 @@ opacity: 100%;
      width: 100%;
      height: auto;
     }
-    .large-row {
+    .large-row h2 {
+      font-family: 'Shadows Into Light', cursive;
+      font-size:xx-large;
 margin-left: 50px;
 margin-bottom: 15px;
     }
     .section-img1{
+    
       display: flex;
 justify-content: flex-start;
 max-width: 1900px;
@@ -270,15 +280,26 @@ max-height: 400px;
 width: 100%;
      height: 100%;
     }
+    .novidade{
+      font-weight: 600;
+     color:  #8fd2eb;
+      margin-bottom: 10px;
+    }
     /*  <!--parte 1 of images-->*/
+   /* .section-all-1{
+      position: relative;
+border:1px solid red ;
+max-height: 900px;
+height: 100%; 
+    }*/
     .hood-black-white{
-   
+   position: relative;
     background-color: #f5f5f5;
     margin-bottom:50px ;
       margin-left:50px;
       margin-right:25px ;
-      max-height: 400px;
-      max-width: 400px;
+      max-height: 425px;
+      max-width: 425px;
       height: 100%;
    width: 100%;
  
@@ -308,15 +329,35 @@ width: 100%;
       opacity: 0;
        cursor: pointer;
      }
+
+     .hood-description1 {
+       position: absolute;
+       margin-top: 20px;
+     }
+     .price-hoodie1{ 
+       display: flex;
+       flex-direction: column;
+  padding: 5px 0px;}
+  .price-hoodie1 p{
+ padding: 2px ;
+  }
+  .color-grey{
+    
+    color:   #a9a9a9;
+  
+  }
      /*  <!--parte 2 of images-->*/
      .hood-donuts-container{
-       position: relative;
+      position: relative;
        max-height: 425px;
        height: 100%;
     max-width: 425px;
     width: 100%;
       background-color: #f5f5f5;
 
+      }
+      .hood-description2{
+        position: absolute;
       }
       .img-area2{
         max-height: 425px;
@@ -339,7 +380,7 @@ width: 100%;
       }
        /*  <!--parte 3 of images-->*/
        .hood-humbled-black-container{
-     
+     position: relative;
        background-color: #f5f5f5;
        max-height: 425px;
        height: 100%;
@@ -348,6 +389,9 @@ width: 100%;
        margin-bottom:50px ;
       margin-left: 25px;
        }
+       .hood-description3{
+        position: absolute;
+      }
        .img-area3{
         max-height: 425px;
         height: 100%;
@@ -370,6 +414,7 @@ width: 100%;
       }
          /*  <!--parte 4 of images-->*/
          .hood-different-black-container{
+           position: relative;
          background-color: #f5f5f5;
          margin-bottom:50px ;
          margin-left:25px;
@@ -379,6 +424,9 @@ width: 100%;
     max-width: 425px;
     width: 100%;
          }
+         .hood-description4{
+          position: absolute;
+        }
          .img-area4{
            max-height: 425px;
            height: 100%;
@@ -404,3 +452,344 @@ width: 100%;
         /*nota: max-width+ width:100% e max-heigth:400px + height:100% só unciona até aos 801px
         depois disso aumentar
                             */
+  /*botão1*/                          
+ .button-div{
+   margin-bottom: 100px;
+   margin-top: 200px;
+   display: flex;
+   justify-content: center;
+ }
+.btn1{color: #fff;
+  text-decoration: none;
+  padding: 10px 25px;
+  border-radius: 40px ;
+background-color:rgb(0, 0, 0);
+font-size: 1.15rem;
+transition: all 0.3s ease-in-out;
+}
+ .btn1:hover{
+  color: rgb(0, 0, 0);
+   cursor: pointer;
+background-color: #f5f5f5;
+
+ } 
+ /*começa aqui a section de shorts*/   
+ .shorts-section{
+  display: flex;
+  justify-content: flex-start;
+  max-width: 1900px;
+  max-height: 400px;
+  width: 100%;
+       height: 100%;
+ }                   
+ /*part1 of images 2*/
+ .shorts-Front-1-2{
+   position: relative;
+  background-color: #f5f5f5;
+  margin-bottom:50px ;
+    margin-left:50px;
+    margin-right:25px ;
+    max-height: 425px;
+    max-width: 425px;
+    height: 100%;
+ width: 100%;
+
+ }
+ .shorts-Front-2{
+  width: 100%;
+  max-width: 100%;
+ }
+ .shorts-Front-1{
+
+  position:absolute;
+  top: 0.33%;
+  right: 0.33%;
+  width:100%;
+  max-width:100%;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+ }
+ .shorts-Front-1:hover{
+   opacity: 0;
+cursor: pointer;
+ }
+ .shorts-description1{
+  position: absolute;
+  margin-top: 20px;
+ }
+ .price-shorts1{
+  display: flex;
+  flex-direction: column;
+padding: 5px 0px;}
+.price-hoodie1 p{
+padding: 2px ;
+ }
+ /*part2 of images 2*/
+ .shorts-Different-1-2{
+  position: relative;
+  background-color: #f5f5f5;
+  margin-bottom:50px ;
+    margin-left:50px;
+    margin-right:25px ;
+    max-height: 425px;
+    max-width: 425px;
+    height: 100%;
+ width: 100%;
+ }
+ 
+ .Shorts-Different-1{
+  position:absolute;
+  top: 0.1%;
+  right: 0.1%;
+  width:100%;
+  max-width:100%;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+ }
+ .Shorts-Different-2{ 
+  width: 100%;
+  max-width: 100%;
+ }
+ .Shorts-Different-1:hover{
+   opacity: 0;
+   cursor: pointer;
+ }
+ /*part3 of images 2*/
+ .shorts-Holo-1-2{
+  position: relative;
+  background-color: #f5f5f5;
+  margin-bottom:50px ;
+    margin-left:50px;
+    margin-right:25px ;
+    max-height: 425px;
+    max-width: 425px;
+    height: 100%;
+ width: 100%;
+ }
+ .ShortsHologroove{
+  position:absolute;
+  top: 0.1%;
+  right: 0.1%;
+  width:100%;
+  max-width:100%;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+ }
+ .ShortsHologroove-back{
+  width: 100%;
+  max-width: 100%;
+ }
+ .ShortsHologroove:hover{
+   opacity: 0;
+   cursor: pointer;
+ }
+ /*part4 of images 2*/
+ .shorts-Rosette-1-2{
+  position: relative;
+  background-color: #f5f5f5;
+  margin-bottom:50px ;
+    margin-left:50px;
+    margin-right:25px ;
+    max-height: 425px;
+    max-width: 425px;
+    height: 100%;
+ width: 100%;
+ }
+ .Shorts-Front-Rosette{
+  position:absolute;
+  top: 0.1%;
+  right: 0.1%;
+  width:100%;
+  max-width:100%;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+ }
+ .Shorts-Front-Rosette-back{
+  width: 100%;
+  max-width: 100%;
+ }
+ .Shorts-Front-Rosette:hover{
+  opacity: 0;
+  cursor: pointer;
+}
+.secure-the-bag{
+  position: relative;
+  font-family: 'Sigmar One', cursive;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 200px 0px;
+}
+.secure-the-bag h1{
+font-size: 2rem;
+  font-family: 'Sigmar One', cursive;
+}
+.secure-the-bag .As-Mochilas
+{
+  position: relative;
+  bottom:  20px;
+}
+.secure-the-bag p{
+
+  position: relative;
+  bottom: 30px;
+}
+ /*botão2*/                          
+ .button-div2{
+  position: relative;
+   bottom:  210px;
+  display: flex;
+  justify-content: center;
+}
+.btn2{
+  color: #fff;
+  text-decoration: none;
+ padding: 10px 25px;
+ border-radius: 40px ;
+background-color:rgb(0, 0, 0);
+font-size: 1.15rem;
+transition: all 0.3s ease-in-out;
+}
+.btn2:hover{
+ color: rgb(0, 0, 0);
+  cursor: pointer;
+background-color: #f5f5f5;
+} 
+/*part1 of images3*/
+/*-------------*/
+.section-bags{
+  margin-top: -50px;
+  display: flex;
+justify-content: flex-start;
+max-width: 1900px;
+max-height: 400px;
+width: 100%;
+ height: 100%;
+}
+.hologroove-backpack-1-2{
+  position: relative;
+  background-color: #f5f5f5;
+  margin-bottom:50px ;
+    margin-left:50px;
+    margin-right:25px ;
+    max-height: 425px;
+    max-width: 425px;
+    height: 100%;
+ width: 100%;
+ }
+ 
+ .hologroove-backpack{
+  position:absolute;
+  transform: scale(1.03);
+  right:0.1%;
+  bottom: 1%;
+  width:100%;
+  max-width:100%;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+ }
+ .hologroove-front-backpack{
+  width: 100%;
+  max-width: 100%;
+ }
+ .hologroove-backpack:hover{
+   opacity: 0;
+   cursor: pointer;
+ }
+ 
+ /*part2 of images3*/
+ .groovet-backpack-calssic-1-2{
+  position: relative;
+  background-color: #f5f5f5;
+  margin-bottom:50px ;
+    margin-left:50px;
+    margin-right:25px ;
+    max-height: 425px;
+    max-width: 425px;
+    height: 100%;
+ width: 100%;
+ }
+ .groovet-backpack-calssic-front{
+  position:absolute;
+  transform: scale(1.04);
+  right: 2%;
+  width:100%;
+  max-width:100%;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+ }
+ .groovet-backpack-calssic-back{
+  width: 100%;
+  max-width: 100%;
+ }
+ .groovet-backpack-calssic-front:hover{
+   opacity: 0;
+   cursor: pointer;
+ }
+ /*part3 of images3*/
+ .esb-galaxy-bag03-1-2{
+  position: relative;
+  background-color: #f5f5f5;
+  margin-bottom:50px ;
+    margin-left:50px;
+    margin-right:25px ;
+    max-height: 425px;
+    max-width: 425px;
+    height: 100%;
+ width: 100%;
+ }
+ .esb-galaxy-bag03-Front{
+  transform: scale(1.03);
+  position:absolute;
+  bottom:  0.1%;
+  right: 1%;
+  width:100%;
+  max-width:100%;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+ }
+ .esb-galaxy-bag03-back{
+  width: 100%;
+  max-width: 100%;
+ }
+ .esb-galaxy-bag03-Front:hover{
+   opacity: 0;
+   cursor: pointer;
+ }
+ /*part4 of images3*/
+ .hoopsquad-front-backpack-container{
+  position: relative;
+background-color: #f5f5f5;
+margin-bottom:50px ;
+margin-left:25px;
+margin-right: 50px;
+max-height: 425px;
+height: 100%;
+max-width: 425px;
+width: 100%;
+}
+.hood-description4{
+  margin-top: 20px;
+ position: absolute;
+}
+.hoopsquad-img-area{
+  max-height: 425px;
+  height: 100%;
+max-width: 425px;
+width: 100%;
+
+}
+.hoopsquad-img-area img{
+ transform: scale(1);
+ transition: 0.3s ease-in-out;
+  width: 100%;
+  height:100%;
+}
+
+.hoopsquad-img-area:hover img{
+  transform: scale(1.03);
+  cursor: pointer;
+}
+/*botão3*/                          
+
+/*large image section*/
