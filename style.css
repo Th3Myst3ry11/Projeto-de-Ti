@@ -198,6 +198,7 @@ position: relative;
     desaparecer quando faço hover no .explore-- por conseguinte será feito no final*/
   
 .menu-sub {
+  z-index: 20;
     margin-top: 10px;
     left: 0;  
     position: absolute;
@@ -252,11 +253,14 @@ opacity: 100%;
   /* menu sub width: 200vh;
     left: -700px;*/
     .gajo-com-basketball video{
+     
       width: 100%;
      height: auto;
     }
     .gajo-com-basketball{
-      margin-left: 50px;
+
+position: relative;    
+  margin-left: 50px;
       width: 94%;
       height: 83vh;
       margin-bottom: 50px;
@@ -265,6 +269,31 @@ opacity: 100%;
      width: 100%;
      height: auto;
     }
+    
+      .descrição-gajo-basketball-2{
+        top: 200px;
+        color: #fff;
+        max-width: 500px;
+        position: absolute;
+        bottom: 19px;
+        margin-left: 30px;
+          font-family: 'Sigmar One', cursive;
+        }
+        .descrição-gajo-basketball-2 h1{
+        font-size: 2.5rem;
+          font-family: 'Sigmar One', cursive;
+        }
+        .descrição-gajo-basketball-2 .esscencial
+        {
+          position: relative;
+          bottom:  14px;
+        }
+        .descrição-gajo-basketball-2 p{
+        
+          position: relative;
+          bottom: 30px;
+        } 
+    
     .large-row h2 {
       font-family: 'Shadows Into Light', cursive;
       font-size:xx-large;
@@ -855,10 +884,30 @@ justify-content: space-between;
 }
 /*-----------*/
 .corpo-inteiro-1{
+  display: flex;
+  align-items: flex-end;
 background-color: #f5f5f5;
 margin-left: 0px;
 }
+
+ .btn-corpo1{
+   color: rgb(0, 0, 0);
+   text-decoration: none;
+  border-radius: 40px ;
+  padding: 10px 25px;
+ background-color:#fff;
+ font-size: 1.15rem;
+ transition: all 0.3s ease-in-out;
+  
+ }
+ .btn-corpo1:hover{
+  color: #fff;
+   cursor: pointer;
+ background-color: black;
+ }
 .corpo-container1{
+  
+  position: relative;
 max-width: 600px;
 max-height: 800px;
 width: 100%;
@@ -872,6 +921,25 @@ height: 100%;
 .corpo-inteiro-2{
   background-color: #f5f5f5;
 margin: 0px 20px;
+position: relative;
+display: flex;
+ align-items: flex-end;
+  }
+  .btn-corpo2:hover{
+   color: #fff;
+    cursor: pointer;
+  background-color: black;
+  }
+  .btn-corpo2{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+   border-radius: 40px ;
+   padding: 10px 25px;
+  background-color:#fff;
+  font-size: 1.15rem;
+  transition: all 0.3s ease-in-out;
+    
+    position: absolute;
   }
   .corpo-container2{
   max-width: 600px;
@@ -886,7 +954,25 @@ margin: 0px 20px;
 /*-----------*/
 .corpo-inteiro-3{
   background-color: #f5f5f5;
+  position: relative;
+  display: flex;
+ align-items: flex-end;
+  }
+  .btn-corpo3{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+   border-radius: 40px ;
+   padding: 10px 25px;
+  background-color:#fff;
+  font-size: 1.15rem;
+  transition: all 0.3s ease-in-out;
   
+    position: absolute;
+  }
+  .btn-corpo3:hover{
+   color: #fff;
+    cursor: pointer;
+  background-color: black;
   }
   .corpo-container3{
   max-width: 600px;
@@ -987,7 +1073,9 @@ opacity: 0.7;
 transition: all 0.3s ease-in-out;
   }
   .final{
+ 
     margin: 0px 200px;
     display: flex;
     flex-direction: column;
   }
+  
