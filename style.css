@@ -62,6 +62,15 @@ a{
     height: 30px;
     display: inline-block;
     margin: 10px;   
+    cursor: pointer;
+}
+.icons button img{
+  
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  margin: 10px; 
 }
 .pessoa a img,
 .procura a img,
@@ -73,6 +82,73 @@ a{
 .icons{
     padding-right: 50px;
 }
+/*search box on click*/
+/* The overlay effect with black background */
+.overlay {
+  height: 100%;
+  width: 100%;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9); /* Black with a little bit see-through */
+}
+
+/* The content */
+.overlay-content {
+  position: relative;
+  top: 46%;
+  width: 80%;
+  text-align: center;
+  margin-top: 30px;
+  margin: auto;
+}
+
+/* Close button */
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+  cursor: pointer;
+  color: white;
+}
+
+.overlay .closebtn:hover {
+  color: #ccc;
+}
+
+/* Style the search field */
+.overlay input[type=text] {
+  padding: 15px;
+  font-size: 17px;
+  border: none;
+  float: left;
+  width: 80%;
+  background: white;
+}
+
+.overlay input[type=text]:hover {
+  background: #f1f1f1;
+}
+
+/* Style the submit button */
+.overlay button {
+  float: left;
+  width: 20%;
+  padding: 15px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.overlay button:hover {
+  background: #bbb;
+}
+/*search box acima*/
 .text_links li{
     display: inline-block;
     list-style: none;
@@ -122,22 +198,95 @@ display: none;
     display: none;
   }
   @media (max-width: 870px){
+    .descrição-gajo-basketball{
+      margin-left:0 !important;
+      max-width: 400px !important;
+    }
+    .gajo-com-basketball-video{
+      margin-left: 0 !important;
+    }
  .icons{
      padding-right: 0;
   }
+  .hologroove-backpack-1-2,.groovet-backpack-calssic-1-2,.esb-galaxy-bag03-1-2{
+    margin-bottom:100px !important;
+  }
+  .hood-black-white,.hood-donuts-container,
+  .hood-humbled-black-container,.shorts-Front-1-2,.shorts-Different-1-2,.shorts-Holo-1-2{
+    margin-bottom:135px !important;
+  }
+  .section-bags,.shorts-section,.section-img1,.section-images4{
+    flex-direction: column;
+    align-items:center;
+  }
+  .UL123{
+    margin: 0px 50px;
+  }
+}
+@media (max-width: 911px){
+  .descrição-gajo-basketball-2{
+    top:20px !important;
+  }
+}
+@media (max-width: 700px){
+  .section-footer{
+    flex-direction: column;
+  }
+  .UL123{
+    border-bottom: 1px solid black;
+  }
+}
+@media (max-width: 590px){
+  .descrição-gajo-basketball-2 h1, .descrição-gajo-basketball h1{
+    font-size: 1.2rem !important;
+  }
   
 }
+@media (max-width: 435px){
+  .descrição-gajo-basketball{
+    display:none;
+  }
+}@media (max-width: 335px){
+  .descrição-gajo-basketball-2{
+display: none;
+  }
+}
+  
+
 @media (max-width: 801px){
+  /**/
+  #showMega:checked ~ .menu-sub{
+    max-height: 100%;
+  }
+  .menu-sub{
+    position: static;
+    top: 65px;
+    opacity: 1;
+    visibility: visible;
+    padding: 0 20px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: all 0.3s ease;}
+  /**/
+  .descrição-gajo-basketball-2 h1{
+    font-size: 20px;
+  }
     .checkbtn{
      display: block;
     }
     .logo_div{
         margin-left:50px ;
     }
+    
     .icons{
         display:flex ;
     }
-    ul{
+    .menu-sub{
+      flex-direction: column;
+      width: 700px !important;
+    }
+   .text_links{
+     z-index: 23;
       position: fixed;
       width: 100%;
       height: 100vh;
@@ -158,13 +307,15 @@ display: none;
     #check:checked ~ ul{
       left: 0;
     }
+   footer{flex-direction: column;
+         align-items:center;} 
 /*aqui em baixo é o sliding text*/
   }
 .hwrap{
     width: 100%;
     height: 60px;
     overflow: hidden;
-    background: #f5f5f5; 
+    background: rgb(189, 0, 179); 
 }
 .sliding_text{
 display: flex;
@@ -196,24 +347,24 @@ position: relative;
     /* aqui em baixo é o codigo do menu dropdown que já está a funcionar era so alterar a distancia de menu_sub:hover 
     para menu-sub :hover.... de qq forma ainda tenho q utilizar alguma forma de javascript(jquery) para fazer a div sliding text
     desaparecer quando faço hover no .explore-- por conseguinte será feito no final*/
-  
+  .sub-menu-container{
+   
+  }
 .menu-sub {
-  z-index: 20;
-    margin-top: 10px;
-    left: 0;  
+  z-index: 20;  
+   margin-left: -200px; 
     position: absolute;
    /* width: 200vh;
     left: -700px;*/
-    width: 900px;
+    width: 1100px;
     background: rgb(255, 253, 253);
-opacity: 100%;
     padding: 2em; 
    display: none; 
   }
   
   .explore:hover .menu-sub{
    display: block;
-  
+  transition: all 0.3s ease;
   }
  
   .menu-sub li {
@@ -240,7 +391,7 @@ opacity: 100%;
   }
   
   .menu-col-1
-   {
+   {display: block;
     float: left;
     
   }
@@ -248,7 +399,10 @@ opacity: 100%;
   .menu-col-1 {
     width: 25%;
   }
-  
+  .menu-col-1 ul{
+ color: rgb(97, 97, 97);
+ opacity: 0.7;
+  }
   /*termina aqui o dropdown*/
   /* menu sub width: 200vh;
     left: -700px;*/
@@ -262,7 +416,7 @@ opacity: 100%;
 position: relative;    
   margin-left: 50px;
       width: 94%;
-      height: 83vh;
+     
       margin-bottom: 50px;
     }
     .gajo-com-basketball img{
@@ -303,11 +457,9 @@ margin-bottom: 15px;
     .section-img1{
     
       display: flex;
-justify-content: flex-start;
-max-width: 1900px;
-max-height: 400px;
+justify-content: space-between;
+
 width: 100%;
-     height: 100%;
     }
     .novidade{
       font-weight: 600;
@@ -505,11 +657,8 @@ background-color: #f5f5f5;
  /*começa aqui a section de shorts*/   
  .shorts-section{
   display: flex;
-  justify-content: flex-start;
-  max-width: 1900px;
-  max-height: 400px;
-  width: 100%;
-       height: 100%;
+  justify-content: space-between; 
+  width: 100%;  
  }                   
  /*part1 of images 2*/
  .shorts-Front-1-2{
@@ -689,11 +838,10 @@ background-color: #f5f5f5;
 .section-bags{
   margin-top: -50px;
   display: flex;
-justify-content: flex-start;
-max-width: 1900px;
-max-height: 400px;
+justify-content: space-between;
+
 width: 100%;
- height: 100%;
+ 
 }
 .hologroove-backpack-1-2{
   position: relative;
@@ -830,7 +978,7 @@ width: 100%;
   position: relative;
   margin-left: 50px;
   width: 94%;
-  height: 83vh;
+ 
   margin-bottom: 50px;
 }
 .descrição-gajo-basketball{
@@ -884,39 +1032,39 @@ justify-content: space-between;
 }
 /*-----------*/
 .corpo-inteiro-1{
-  display: flex;
-  align-items: flex-end;
-background-color: #f5f5f5;
-margin-left: 0px;
-}
+  background-color: #f5f5f5;
+margin: 0px 20px;
+position: relative;
+display: flex;
+ align-items: flex-end;
+  }
+  .btn-corpo1:hover{
+   color: #fff;
+    cursor: pointer;
+  background-color: black;
+  }
+  .btn-corpo1{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+   border-radius: 40px ;
+   padding: 10px 25px;
+  background-color:#fff;
+  font-size: 1.15rem;
+  transition: all 0.3s ease-in-out;
+    margin-bottom: 30px;
 
- .btn-corpo1{
-   color: rgb(0, 0, 0);
-   text-decoration: none;
-  border-radius: 40px ;
-  padding: 10px 25px;
- background-color:#fff;
- font-size: 1.15rem;
- transition: all 0.3s ease-in-out;
-  
- }
- .btn-corpo1:hover{
-  color: #fff;
-   cursor: pointer;
- background-color: black;
- }
-.corpo-container1{
-  
-  position: relative;
-max-width: 600px;
-max-height: 800px;
-width: 100%;
-height: 100%;
-}
-.corpo-container1 img{
-width: 100%;
-height: 100%;
-}
+    position: absolute;
+  }
+  .corpo-container1{
+  max-width: 600px;
+  max-height: 800px;
+  width: 100%;
+  height: 100%;
+  }
+  .corpo-container1 img{
+  width: 100%;
+  height: 100%;
+  }
 /*-----------*/
 .corpo-inteiro-2{
   background-color: #f5f5f5;
@@ -938,7 +1086,7 @@ display: flex;
   background-color:#fff;
   font-size: 1.15rem;
   transition: all 0.3s ease-in-out;
-    
+    margin-bottom: 30px;
     position: absolute;
   }
   .corpo-container2{
@@ -966,7 +1114,7 @@ display: flex;
   background-color:#fff;
   font-size: 1.15rem;
   transition: all 0.3s ease-in-out;
-  
+  margin-bottom: 30px;
     position: absolute;
   }
   .btn-corpo3:hover{
@@ -988,7 +1136,7 @@ display: flex;
   .section-footer{
     justify-content: space-between;
     display: flex;
-    background-color: rgb(245 245 245);
+  margin-right: 150px;
   }
  /* .footer-ul-container{
     font-size: 1.3rem;
@@ -1046,13 +1194,21 @@ color: gray;
   }
   .payment-svg{
     display: flex;
+    
+    list-style: none;
   }
-  .payment-svg img{
-    width: 60px;
-    height: 50px;
+  .payment-svg  li {
+    margin: 1px;
+    width: 50px;
+    height: 40px;
+  }
+  .payment-svg  li img{
+    width: 100%;
+    height: 100%;
   }
   footer{
-    
+    max-width: 1900px;
+    width: 100%;
     margin-top: 50px;
     display: flex;
     justify-content: space-between;
@@ -1073,9 +1229,9 @@ opacity: 0.7;
 transition: all 0.3s ease-in-out;
   }
   .final{
- 
-    margin: 0px 200px;
+ background-color: #f5f5f5;
+    padding: 0px 20px;
     display: flex;
     flex-direction: column;
   }
-  
+  /*nota:diminuir o tamanho da distancia entre os links do menu dropdown e  o explore se não encontrar outra solução*/

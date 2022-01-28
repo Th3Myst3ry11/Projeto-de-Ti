@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap" rel="stylesheet">
@@ -17,6 +18,7 @@
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <title>Project TI</title>
     <link rel="stylesheet" href="style.css">
+    <script src= script.js></script>
 </head>
 <body>
   <nav >
@@ -30,11 +32,13 @@
         <i class="fas fa-bars"></i>
       </label>
             <ul class="text_links">
-                <li class="explore"><a href="#">Explore</a>   
+                <li class="explore"><a href="#">Explore</a> 
+                 
+              <div class="menu-sub-container">          
            <div class="menu-sub">        
                     <div class="menu-col-1">
                       <h3 class="menu-category">Destaque</h3>
-                      <ul>
+                      <ul class="destaque">
                         <li><a href="">Novas Peças</a></li>
                         <li><a href="">Mais vendidos</a></li>
                         <li><a href="">Itens em saldo</a></li>
@@ -43,7 +47,7 @@
                       </div>
                       <div class="menu-col-1">
                         <h3 class="menu-category">Roupas</h3>
-                        <ul>
+                        <ul class="roupas">
                           <li><a href="">Desgaste ativo</a></li>
                           <li><a href="">suéter de tripulação</a></li>
                           <li><a href="">Hoodies</a></li>
@@ -56,7 +60,7 @@
                         </div>
                         <div class="menu-col-1">
                             <h3 class="menu-category">Acessorios</h3>
-                            <ul>
+                            <ul class="acessorios">
                               <li><a href="">Mochilas e Malas</a></li>
                               <li><a href="">Bolas de Basquetbol</a></li>
                               <li><a href="">chapéu</a></li>
@@ -68,6 +72,7 @@
                             </ul>
                             </div>
                 </div>
+              </div> 
               </li>
                
                 <li class="mais"><a href="#">Mais vendidos</a></li>
@@ -76,9 +81,20 @@
             </ul> 
             <section class="icons">  
                 <a href="#"><img src="images/person-244.svg" alt="Pessoa"></a>
-                <a  href="#"><img src="images/search-2903.svg" alt="search"></a> 
+                <button class="openBtn" onclick="openSearch()"><img src="images/search-2903.svg" ></button> 
                 <a  href="#"><img src="images/shopping-cart-1985.svg" alt="cart"></a>
-               </section>   
+               </section>  
+               <!--search box on click-->
+               <div id="myOverlay" class="overlay">
+                <span class="closebtn" onclick="closeSearch()" title="Close Overlay">x</span>
+                <div class="overlay-content">
+                  <form action="action_page.php">
+                    <input type="text" placeholder="Search.." name="search">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                  </form>
+                </div>
+              </div>
+              <!------------------------>
               </header>
   </nav>
 
@@ -413,18 +429,19 @@
 <p>politicas de privacidade</p>
 
        </div> 
-  <div class="payment-svg">
-    <img src="icons payment svg/amazon-2-logo-svgrepo-com.svg">
-    <img src="icons payment svg/amex-svgrepo-com.svg">
-    <img src="icons payment svg/apple-pay-payment-mark-logo-svgrepo-com.svg">
-    <img src="icons payment svg/diners-svgrepo-com.svg">
-    <img src="icons payment svg/elo-svgrepo-com.svg">
-    <img src="icons payment svg/jcb-svgrepo-com.svg">
-    <img src="icons payment svg/mastercard-svgrepo-com.svg">
-    <img src="icons payment svg/paypal-svgrepo-com.svg">
-    <img src="icons payment svg/visa-svgrepo-com.svg">
+ 
+    <ul class="payment-svg">
+    <li><img src="icons payment svg/amazon-2-logo-svgrepo-com.svg"></li>
+ <li><img src="icons payment svg/amex-svgrepo-com.svg"></li>   
+   <li><img src="icons payment svg/apple-pay-payment-mark-logo-svgrepo-com.svg"></li> 
+  <li><img src="icons payment svg/diners-svgrepo-com.svg"></li>  
+  <li><img src="icons payment svg/elo-svgrepo-com.svg"></li>  
+  <li><img src="icons payment svg/jcb-svgrepo-com.svg"></li>  
+    <li><img src="icons payment svg/mastercard-svgrepo-com.svg"></li>
+   <li><img src="icons payment svg/paypal-svgrepo-com.svg"></li> 
+   <li><img src="icons payment svg/visa-svgrepo-com.svg"></li> 
+  </ul>
   
-  </div>
     </footer>
   </section>
 </body>
