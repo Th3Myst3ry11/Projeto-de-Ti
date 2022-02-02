@@ -1194,7 +1194,7 @@ color: gray;
   }
   .payment-svg{
     display: flex;
-    
+    margin-top:10px;
     list-style: none;
   }
   .payment-svg  li {
@@ -1214,7 +1214,7 @@ color: gray;
     justify-content: space-between;
   }
   .footer-final-description{
-    
+    margin-bottom: 15px;
     display: flex;
   }
   .footer-final-description p{

@@ -1,29 +1,192 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt">
 <head>
-	<title>login</title>
-	<link rel="stylesheet" type="text/css" href="fontawesome/css/all.min.css">
-	<link rel="stylesheet" type="text/css" href="login.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <title>Project TI</title>
+    <link rel="stylesheet" href="login2.css">
+    <script src= script.js></script>
 </head>
 <body>
- <div class="container">
- 	<div class="header">
- 		<h1>login</h1>
- 	</div>
- 	<div class="main">
- 		<form>
- 			<span>
- 				<i class="fa fa-user"></i>
- 				<input type="text" placeholder="Username" name="">
- 			</span><br>
- 			<span>
- 				<i class="fa fa-lock"></i>
- 				<input type="password" placeholder="password" name="">
- 			</span><br>
- 				<button>login</button>
+  <nav >
+    <header>
+        <div class="logo_div">
+            <img class="logo" src="images/logoWEbsite.svg" alt="logo">
+        </div>    
+        
+            <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+            <ul class="text_links">
+                <li class="explore"><a href="#">Explore</a> 
+                 
+              <div class="menu-sub-container">          
+           <div class="menu-sub">        
+                    <div class="menu-col-1">
+                      <h3 class="menu-category">Destaque</h3>
+                      <ul class="destaque">
+                        <li><a href="">Novas Peças</a></li>
+                        <li><a href="">Mais vendidos</a></li>
+                        <li><a href="">Itens em saldo</a></li>
+                        <li><a href="">Gift cards</a></li>
+                      </ul>
+                      </div>
+                      <div class="menu-col-1">
+                        <h3 class="menu-category">Roupas</h3>
+                        <ul class="roupas">
+                          <li><a href="">Desgaste ativo</a></li>
+                          <li><a href="">suéter de tripulação</a></li>
+                          <li><a href="">Hoodies</a></li>
+                          <li><a href="">Jaquetas e blusões </a></li>
+                          <li><a href="">joggers</a></li>
+                          <li><a href="">mangas comnpridas</a></li>
+                          <li><a href="">shorts</a></li>
+                          <li><a href="">T-shirts</a></li>
+                        </ul>
+                        </div>
+                        <div class="menu-col-1">
+                            <h3 class="menu-category">Acessorios</h3>
+                            <ul class="acessorios">
+                              <li><a href="">Mochilas e Malas</a></li>
+                              <li><a href="">Bolas de Basquetbol</a></li>
+                              <li><a href="">chapéu</a></li>
+                              <li><a href="">Lingas</a></li>
+                              <li><a href="">Meias</a></li>
+                              <li><a href="">roupas interiores</a></li>
+                              <li><a href="">Stickers de vinyl</a></li>
+                              <li><a href="">pulseiras</a></li>
+                            </ul>
+                            </div>
+                </div>
+              </div> 
+              </li>
+               
+                <li class="mais"><a href="#">Mais vendidos</a></li>
+                <li class="novidades"><a href="#">Novidades</a></li>
+                <li class="sobre"><a href="#">sobre nós</a></li>
+            </ul> 
+            <section class="icons">  
+                <a href="login.html"><img src="images/person-244.svg" alt="Pessoa"></a>
+                <button class="openBtn" onclick="openSearch()"><img src="images/search-2903.svg" ></button> 
+                <a  href="#"><img src="images/shopping-cart-1985.svg" alt="cart"></a>
+               </section>  
+               <!--search box on click-->
+               <div id="myOverlay" class="overlay">
+                <span class="closebtn" onclick="closeSearch()" title="Close Overlay">x</span>
+                <div class="overlay-content">
+                  <form action="action_page.php">
+                    <input type="text" placeholder="Search.." name="search">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                  </form>
+                </div>
+              </div>
+              <!------------------------>
+              </header>
+  </nav>
 
- 		</form>
- 	</div>
- </div>
-</body>
-</html>
+    <div class="hwrap"> 
+        <div class="sliding_text">
+            <div class="linha"><a href="#">standard gratuito em pedidos superiores a 70€</a></div>
+            <div class="linha"><a href="#">As melhores promoçoes em acessórios até 50% de desconto</a></div>
+            <div class="linha"><a href="#">Prazo alargado de devoluções até 01/01</a></div>
+          </div> 
+    </div>
+   
+   <!--login form-->
+   <div class="login-container">
+    <div class="header">
+        <h1>login</h1>
+    </div>
+    <div class="main">
+        <form>
+            <span>
+                <i class="fa fa-user"></i>
+                <input type="text" placeholder="Username" name="">
+            </span><br>
+            <span>
+                <i class="fa fa-lock"></i>
+                <input type="password" placeholder="password" name="">
+            </span><br>
+                <button>login</button>
+
+        </form>
+    </div>
+</div>
+<!--footer-->
+<section class="final">
+    <section class="section-footer">
+  
+       
+       <!--  <section class="footer-ul-container">-->
+       <div class="ul-li-footer1 UL123">
+        <h3>Roupas</h3>
+         <ul>
+         <li>Novidades</li>
+         <li>Tendências</li>
+         </ul>
+       </div>
+       <div class="ul-li-footer2 UL123 ">
+        <h3>Ball Hoopers</h3>
+        <ul>
+        <li>Sobre nós</li>
+        <li>Instagram</li>
+        <li>Reviews</li>
+        <li>Contacto</li>
+        </ul>
+      </div>
+      <div class="ul-li-footer3 UL123">
+        <h3>Acessorios</h3>
+        <ul>
+        <li>Mochilas</li>
+        <li>Bandanas</li>
+        <li>corda</li>
+        <li>meias</li>
+        </ul>
+      </div>
+    <!--</section>-->
+    <div class="font-awesome-social-media-section">
+      <p>Social Media</p>
+      <ul> 
+        <li><i class="fab fa-facebook fa-lg"></i></li>
+        <li><i class="fab fa-twitter fa-lg"></i></li>
+        <li><i class="fab fa-instagram fa-lg"></i></li>
+      </ul>
+    </div>
+  </section>
+       <footer>
+         <div class="footer-final-description">
+  <p>Status da compra</p>
+  <p>conta</p>
+  <p>FAQ/devoluções</p>
+  <p>politicas de privacidade</p>
+  
+         </div> 
+   
+      <ul class="payment-svg">
+      <li><img src="icons payment svg/amazon-2-logo-svgrepo-com.svg"></li>
+   <li><img src="icons payment svg/amex-svgrepo-com.svg"></li>   
+     <li><img src="icons payment svg/apple-pay-payment-mark-logo-svgrepo-com.svg"></li> 
+    <li><img src="icons payment svg/diners-svgrepo-com.svg"></li>  
+    <li><img src="icons payment svg/elo-svgrepo-com.svg"></li>  
+    <li><img src="icons payment svg/jcb-svgrepo-com.svg"></li>  
+      <li><img src="icons payment svg/mastercard-svgrepo-com.svg"></li>
+     <li><img src="icons payment svg/paypal-svgrepo-com.svg"></li> 
+     <li><img src="icons payment svg/visa-svgrepo-com.svg"></li> 
+    </ul>
+    
+      </footer>
+    </section>

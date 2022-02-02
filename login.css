@@ -1,98 +1,538 @@
 
-body {
-	font-family: sans-serif;	
-	background-image: url(login-image.jpg);
-	background-repeat: no-repeat;
-	overflow: hidden;
-	background-size: cover;
-	
+@import url('https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap');
+
+/*codigo para a barra de navegação
+    .navbar ul li{
+    list-style:none;
+    display:inline_block;
+    margin:0 20px;
+    position:relation;
+}
+.navbar ul li::after
+{
+    content:'';
+    height:3px;
+    width:0;
+    background:#ffc107;
+    position:absolute;
+    left:0;
+    bottom:-10px;
+    transition:0.5s;
+}
+    .navbar ul li:hover::after{
+        width:100%;
+        termino do codigo para a barra de navegação
+        -----codigo para sliding text-----
+        
+*/
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Serif 4', sans-serif;
 }
 
-.container {
-	width: 380px;
-	margin:7% auto;
-	border-radius: 25px;
-	background-color: rgba(0,0,0,0.1);
-	box-shadow: 0 0 17px #333;
+header{
+   
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+   
+    align-items: center;
+}
+a{
+    text-decoration: none;
+}
+.logo{
+    cursor: pointer;
+    width: 100%;
+     height:100%;}
+/*.pessoa,
+.procura,
+.carrinho{
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    margin: 10px;
+    
+}*/
+/* The overlay effect with black background */
+.overlay {
+    height: 100%;
+    width: 100%;
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9); /* Black with a little bit see-through */
+  }
+  
+  /* The content */
+  .overlay-content {
+    position: relative;
+    top: 46%;
+    width: 80%;
+    text-align: center;
+    margin-top: 30px;
+    margin: auto;
+  }
+  
+  /* Close button */
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    cursor: pointer;
+    color: white;
+  }
+  
+  .overlay .closebtn:hover {
+    color: #ccc;
+  }
+  
+  /* Style the search field */
+  .overlay input[type=text] {
+    padding: 15px;
+    font-size: 17px;
+    border: none;
+    float: left;
+    width: 80%;
+    background: white;
+  }
+  
+  .overlay input[type=text]:hover {
+    background: #f1f1f1;
+  }
+  
+  /* Style the submit button */
+  .overlay button {
+    float: left;
+    width: 20%;
+    padding: 15px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .overlay button:hover {
+    background: #bbb;
+  }
+.icons a img {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    margin: 10px;   
+    cursor: pointer;
+}
+.icons button img{
+  
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  margin: 10px; 
+}
+.pessoa a img,
+.procura a img,
+.carrinho a img{
+    width: 100%;
+    height: 100%;
+    padding: 0px 2px;
+}
+.icons{
+    padding-right: 50px;
+}
+.text_links li{
+    display: inline-block;
+    list-style: none;
+    padding: 0px 20px;
+    position: relative;
+ 
+}
+.text_links li a{
+    color: black;
+}
+.text_links li ::after
+{
+    content:'';
+    height:3px;
+    width:0;
+    background:#bd00b3;
+    position:absolute;
+    left:20px;
+    bottom: -10px;
+    transition:0.5s;
+}
+/*::after sintax de content -- o conteudo vem after do content*/
+
+
+.mais :hover::after{
+    width: 72%;
+}
+.novidades :hover::after{
+    width: 66%;
+}
+.sobre :hover::after{
+width: 65%;
+}
+.logo_div{  
+    width: 150px;
+    height: 80px;
+    /*aqui em baixo é a responsividade*/
+}
+.checkbtn{
+font-size: 30px;
+position: absolute;
+ left: 10px;
+display: none;
+ cursor: pointer;
+  }
+  #check{
+    display: none;
+  }
+
+@media (max-width: 870px){
+  .descrição-gajo-basketball{
+    margin-left:0 !important;
+    max-width: 400px !important;
+  }
+  .gajo-com-basketball-video{
+    margin-left: 0 !important;
+  }
+.icons{
+   padding-right: 0;
+}
+.hologroove-backpack-1-2,.groovet-backpack-calssic-1-2,.esb-galaxy-bag03-1-2{
+  margin-bottom:100px !important;
+}
+.hood-black-white,.hood-donuts-container,
+.hood-humbled-black-container,.shorts-Front-1-2,.shorts-Different-1-2,.shorts-Holo-1-2{
+  margin-bottom:135px !important;
+}
+.section-bags,.shorts-section,.section-img1,.section-images4{
+  flex-direction: column;
+  align-items:center;
+}
+.UL123{
+  margin: 0px 50px;
+}
+}
+@media (max-width: 911px){
+.descrição-gajo-basketball-2{
+  top:20px !important;
+}
+}
+@media (max-width: 700px){
+.section-footer{
+  flex-direction: column;
+}
+.UL123{
+  border-bottom: 1px solid black;
+}
+}
+@media (max-width: 590px){
+.descrição-gajo-basketball-2 h1, .descrição-gajo-basketball h1{
+  font-size: 1.2rem !important;
 }
 
-.header {
-	text-align: center;
-	padding-top: 75px;
 }
-
-.header h1 {
-	color: #333;
-	font-size: 45px;
-	margin-bottom: 80px;
+@media (max-width: 435px){
+    input{
+        width: 300px!important;
+    }
+   .main button{
+        padding:10px 140px!important;
+    }
+.descrição-gajo-basketball{
+  display:none;
 }
-
-.main {
-	text-align: center;
+}@media (max-width: 335px){
+.descrição-gajo-basketball-2{
+display: none;
 }
-
-.main input, button {
-	width: 300px;
-	height: 40px;
-	border:none;
-	outline: none;
-	padding-left: 40px;
-	box-sizing: border-box;
-	font-size: 15px;
-	color: #333;
-	margin-bottom: 40px;
-}
-
-.main button {
-	padding-left: 0;
-	background-color: #83acf1;
-	letter-spacing: 1px;
-	font-weight: bold;
-	margin-bottom: 70px;
-}
-
-.main button:hover {
-	box-shadow: 2px 2px 5px #555;
-	background-color: #7799d4;
-}
-.main input:hover {
-	box-shadow: 2px 2px 5px #555;
-	background-color: #ddd;
-}
-
-.main span {
-	position: relative;
-}
-
-.main i {
-	position: absolute;
-	left: 15px;
-	color: #333;
-	font-size: 16px;
-	top: 2px;
 }
 
 
+@media (max-width: 801px){
+/**/
+#showMega:checked ~ .menu-sub{
+  max-height: 100%;
+}
+.menu-sub{
+  position: static;
+  top: 65px;
+  opacity: 1;
+  visibility: visible;
+  padding: 0 20px;
+  max-height: 0px;
+  overflow: hidden;
+  transition: all 0.3s ease;}
+/**/
+.descrição-gajo-basketball-2 h1{
+  font-size: 20px;
+}
+  .checkbtn{
+   display: block;
+  }
+  .logo_div{
+      margin-left:50px ;
+  }
+  
+  .icons{
+      display:flex ;
+  }
+  .menu-sub{
+    flex-direction: column;
+    width: 700px !important;
+  }
+ .text_links{
+   z-index: 23;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #bd00b3;
+    top: 95px;
+    left: -100%;
+    text-align: left;
+    transition: all .5s;
+  }
+  .text_links  li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  .text_links  li a{
+    font-size: 20px;
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
+ footer{flex-direction: column;
+       align-items:center;} 
+/*aqui em baixo é o sliding text*/
+}
+.hwrap{
+  width: 100%;
+  height: 60px;
+  overflow: hidden;
+  background: rgb(189, 0, 179); 
+}
+.sliding_text{
+display: flex;
+position: relative;
+}
+.sliding_text:hover{animation-play-state: paused;}
+.linha{
+  padding-top: 20px;
+  text-align: center;
+  width: 100%;
+ flex-shrink: 0;
+}
+.linha a{
+  color: black;
+}
+@keyframes slide{
+0%{right: 0%;}
+30%{right: 0%;}
+33%{right: 100%;}
+63%{right: 100%;}
+66%{right: 200%;}
+97%{right: 200%;}
+100%{right: 200%;}
+}
 
+.sliding_text{animation:slide linear 20s infinite;
+}
 
+  /* aqui em baixo é o codigo do menu dropdown que já está a funcionar era so alterar a distancia de menu_sub:hover 
+  para menu-sub :hover.... de qq forma ainda tenho q utilizar alguma forma de javascript(jquery) para fazer a div sliding text
+  desaparecer quando faço hover no .explore-- por conseguinte será feito no final*/
+.sub-menu-container{
+ 
+}
+.menu-sub {
+z-index: 20;  
+ margin-left: -200px; 
+  position: absolute;
+ /* width: 200vh;
+  left: -700px;*/
+  width: 1100px;
+  background: rgb(255, 253, 253);
+  padding: 2em; 
+ display: none; 
+}
 
+.explore:hover .menu-sub{
+ display: block;
+transition: all 0.3s ease;
+}
 
+.menu-sub li {
+  display: block;
+}
 
+.menu-sub a {
+  padding: 0;
+  margin-bottom: .35em;
+}
 
+.menu-sub a:hover {
+  text-decoration: underline;
+  
+}
 
+.menu-category {
+  margin: 2.5em 0 .5em;
+  color: rgb(0, 0, 0); 
+}
 
+.menu-category:first-of-type {
+  margin-top: 0;
+}
 
+.menu-col-1
+ {display: block;
+  float: left;
+  
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+.menu-col-1 {
+  width: 25%;
+}
+.menu-col-1 ul{
+color: rgb(97, 97, 97);
+opacity: 0.7;
+}
+/*login css*/
+.login-container{  
+   margin: 7% ;
+}
+.main,.header{
+text-align: center;
+}
+.main input{
+    width: 400px;
+    height: 50px;
+    margin: 10px 0px;
+    border:1px solid rgb(160, 160, 160);
+}
+.main button{
+    margin-left: 4px;
+    color: #fff;
+  background-color: #2d2d2d;
+   padding: 15px 180px; 
+    border-radius: 40px;
+}
+.main button:hover{
+    color: black;
+    background-color: rgb(245, 245, 245);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+/*footer*/
+.section-footer{
+    justify-content: space-between;
+    display: flex;
+  margin-right: 150px;
+  }
+ /* .footer-ul-container{
+    font-size: 1.3rem;
+    margin-left:200px ;
+    margin-top: 50px;
+    display: flex;
+  }*/
+  .UL123 h3:hover{
+    cursor: pointer;
+    opacity: 0.7;
+    transition: all 0.3s ease-in-out;
+  }
+  .UL123 li:hover{
+    cursor: pointer;
+    opacity: 0.7;
+    transition: all 0.3s ease-in-out;
+  }
+  ul{
+    list-style: none;
+  }
+  .UL123 li{
+   
+    font-size: 1.1rem;
+    padding:5px;
+color: gray;
+  }
+  .UL123 h3 {
+    
+    font-size: 1.1rem;
+  }
+  .font-awesome-social-media-section{
+    font-size: 1.12rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+    margin-top: 50px;
+  }
+  .font-awesome-social-media-section ul{
+    margin-top: 7px;
+    max-width: 300px;
+    width: 100%;
+    height: 100%;
+    max-height: 300px;
+    display: flex;  
+    
+  }
+  .font-awesome-social-media-section ul li{
+    margin:0px 5px
+  }
+  .font-awesome-social-media-section ul li :hover{
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: all 0.3s ease-in-out;
+  }
+  .payment-svg{
+    display: flex;
+    margin-top: 20px;
+    list-style: none;
+  }
+  .payment-svg  li {
+    margin: 1px;
+    width: 50px;
+    height: 40px;
+  }
+  .payment-svg  li img{
+    width: 100%;
+    height: 100%;
+  }
+  footer{
+    max-width: 1900px;
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer-final-description{
+    margin-bottom: 15px;
+    display: flex;
+  }
+  .footer-final-description p{
+    
+    padding: 3px;
+    border-left: 1px solid rgb(107, 107, 107);
+    height: 27px;
+  }
+  .footer-final-description p:hover{
+    cursor: pointer;
+opacity: 0.7;
+transition: all 0.3s ease-in-out;
+  }
+  .final{
+ background-color: #f5f5f5;
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+  }
